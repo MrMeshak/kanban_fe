@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export interface ISignupPageProps {}
 
 export default function SignupPage(props: ISignupPageProps) {
