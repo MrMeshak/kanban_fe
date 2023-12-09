@@ -9,7 +9,7 @@ export default function LoginSignupLink(props: ILoginSignupLinkProps) {
       <p className="">
         Don't have an account?{' '}
         <Link
-          className="pl-1 font-semibold  decoration-2 hover:text-teal-700 hover:underline"
+          className="pl-1 font-semibold  decoration-2 hover:text-teal-600 hover:underline"
           to="/signup"
         >
           Sign Up
