@@ -1,12 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { InputText } from '../base/form/inputText';
+import { FormInputText } from '../base/form/formInputText';
 import { Button } from '../base/button/button';
 import { httpClient } from '../../axios';
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { Axios, AxiosError } from 'axios';
+import FormLabel from '../base/form/formLabel';
+import FormFieldError from '../base/form/formFieldError';
+import FormRootError from '../base/form/formRootError';
 
 const loginFormSchema = z.object({
   email: z.string().min(1, 'Required').email('Invalid email'),
@@ -55,48 +58,29 @@ export default function LoginForm(props: ILoginFormProps) {
   return (
     <form className="py-4" onSubmit={handleSubmit(onSubmit)}>
       <div className="relative pb-5">
-        <div className="flex items-center justify-between">
-          <label
-            htmlFor="email"
-            className="block pb-1 font-semibold text-gray-300 "
-          >
-            Email
-          </label>
-        </div>
-        <InputText
+        <FormLabel htmlFor="email">Email</FormLabel>
+        <FormInputText
           _variant={errors.email ? 'error' : 'primary'}
           {...register('email')}
         />{' '}
         {errors.email && (
-          <p className="absolute  bottom-0 text-sm text-rose-300">
-            {errors.email.message}
-          </p>
+          <FormFieldError>{errors.email.message}</FormFieldError>
         )}
       </div>
       <div className=" relative pb-5">
-        <label
-          htmlFor="password"
-          className="block pb-1 font-semibold text-gray-300"
-        >
-          Password
-        </label>
-        <InputText
+        <FormLabel htmlFor="password">Password</FormLabel>
+        <FormInputText
           type="password"
           _variant={errors.password ? 'error' : 'primary'}
           {...register('password')}
         />
         {errors.password && (
-          <p className="absolute bottom-0 text-sm text-rose-300">
-            {errors.password.message}
-          </p>
+          <FormFieldError>{errors.password.message}</FormFieldError>
         )}
       </div>
       {errors.root && (
-        <p className="rounded-md bg-rose-100 px-4 py-2  text-rose-700">
-          {errors.root.message}
-        </p>
+        <FormRootError className="my-2">{errors.root.message}</FormRootError>
       )}
-
       <Button type="submit" className="my-3 w-full">
         Login
       </Button>

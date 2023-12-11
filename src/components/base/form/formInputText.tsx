@@ -2,19 +2,19 @@ import { InputHTMLAttributes, Ref, forwardRef } from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
 import cn from '../../../utils/cn';
 
-interface IInputTextProps
+interface IFormInputTextProps
   extends InputHTMLAttributes<HTMLInputElement>,
-    VariantProps<typeof inputTextVariants> {}
+    VariantProps<typeof formInputTextVariants> {}
 
-export const InputText = forwardRef(
+export const FormInputText = forwardRef(
   (
-    { className, _variant, ...props }: IInputTextProps,
+    { className, _variant, ...props }: IFormInputTextProps,
     ref: Ref<HTMLInputElement>,
   ) => {
     return (
       <input
         type="text"
-        className={cn(inputTextVariants({ _variant, className }))}
+        className={cn(formInputTextVariants({ _variant, className }))}
         {...props}
         ref={ref}
       />
@@ -22,7 +22,7 @@ export const InputText = forwardRef(
   },
 );
 
-const inputTextVariants = cva('', {
+const formInputTextVariants = cva('', {
   variants: {
     _variant: {
       primary:
