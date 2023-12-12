@@ -1,5 +1,5 @@
 import { Button } from '../components/base/button/button';
-import { InputText } from '../components/base/form/inputText';
+import { FormInputText } from '../components/base/form/formInputText';
 
 export interface IHomePageProps {}
 
@@ -21,8 +21,8 @@ export default function HomePage(props: IHomePageProps) {
       <Button _size="sm" _variant="danger">
         Button Destruction
       </Button>
-      <InputText className="" _variant="primary" placeholder=" Email" />
-      <InputText _variant="error" placeholder="email" />
+      <FormInputText className="" _variant="primary" placeholder=" Email" />
+      <FormInputText _variant="error" placeholder="email" />
     </div>
   );
 }
