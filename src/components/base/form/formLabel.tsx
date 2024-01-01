@@ -23,7 +23,7 @@ export default function FormLabel({
 const formLabelVariants = cva('', {
   variants: {
     _variant: {
-      primary: 'block pb-1 font-semibold text-gray-300 ',
+      primary: 'block pb-1 text-slate-300 ',
     },
   },
   defaultVariants: {

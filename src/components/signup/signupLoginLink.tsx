@@ -9,7 +9,7 @@ export default function SignupLoginLink(props: ISignupLoginLinkProps) {
       <p>
         Already have an account?{' '}
         <Link
-          className="pl-1 font-semibold  decoration-2 hover:text-teal-600 hover:underline"
+          className="pl-1 font-semibold  decoration-2 hover:text-sky-600 hover:underline"
           to="/login"
         >
           Log In
