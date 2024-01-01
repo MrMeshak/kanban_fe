@@ -3,7 +3,7 @@ export interface ILogoProps {
   className?: string;
 }
 
-export default function Logo({ fill = '#134e4a', className }: ILogoProps) {
+export default function Logo({ fill = '#0284c7', className }: ILogoProps) {
   return (
     <svg
       className={className}

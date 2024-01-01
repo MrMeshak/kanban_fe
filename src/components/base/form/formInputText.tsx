@@ -26,9 +26,9 @@ const formInputTextVariants = cva('', {
   variants: {
     _variant: {
       primary:
-        'placeholder-gray-200 border-2 border-gray-200 rounded-md focus:border-gray-300 focus:outline-none',
+        'placeholder-slate-300 border-2 border-slate-300 rounded-md focus:border-slate-300 focus:outline-none',
       error:
-        'placholder-grey-200 border-2 border-rose-200 rounded-md focus:border-rose-200 focus:outline-none ',
+        'placeholder-slate-300 border-2 border-rose-300 rounded-md focus:border-rose-300 focus:outline-none ',
     },
     _size: {
       md: 'w-full px-4 py-3',

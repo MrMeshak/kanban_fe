@@ -29,9 +29,9 @@ const buttonVariants = cva('', {
   variants: {
     _variant: {
       primary:
-        'rounded-full bg-teal-700 font-semibold text-white hover:bg-teal-600',
+        'rounded-full bg-slate-700 font-semibold text-white hover:bg-slate-600',
       secondary:
-        'rounded-full bg-teal-100 text-teal-700 font-semibold hover:bg-teal-200',
+        'rounded-full bg-slate-200 text-slate-700 font-semibold hover:bg-slate-300',
       danger:
         'rounded-full bg-rose-500 text-white font-semibold hover:bg-rose-400',
     },
